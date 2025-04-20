@@ -55,4 +55,63 @@ function test4(){
 test4();// cause error
 
 
+//Data Types
 
+// Primitive DT
+let age = 25;
+let price = 99.99;
+let name = "Alice";
+let isActive = true;
+let x;//undefined
+let big = 12345678901234567890n;
+
+//Primitive datatypes Conversion
+
+//String to Int
+let str1 = "123";
+let num1 = parseInt(str1);  // Converts string to integer
+console.log(num1);         // 123
+
+let str2 = "abc";
+let num2 = parseInt(str2);
+console.log(num2);  // NaN
+
+let str3 = "1010";
+let num3 = parseInt(str3, 2);  // Converts binary "1010" to decimal
+console.log(num3);            // 10
+// "1010" is the binary number.
+// The position of each digit represents a power of 2 (starting from the right):
+// 1 * 2^3 = 8
+// 0 * 2^2 = 0
+// 1 * 2^1 = 2
+// 0 * 2^0 = 0
+// Adding them together: 8 + 0 + 2 + 0 = 10.
+
+//Int to String
+
+let num = 456;
+console.log(String(num));         // "456"
+console.log(num + "");            // "456" 
+
+//Non Primitive 
+
+//Array
+
+const arr=[1,2,3];
+console.log(arr[1])
+
+
+//Objects
+
+let person={
+    name: "riya",
+    age: 20,
+    hobby:["dancing","reading","playing"],//array
+    parents:{
+           name:"Amutha",
+           age:"23",
+    }//object
+}
+console.log(person.name)
+console.log(person.hobby[2])
+console.log(person.parents.name)
