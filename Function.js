@@ -19,7 +19,6 @@ function call(p){
 function r(){
     return 10
 }
-
 const rv=r()+1
 console.log(rv);
 //Function Experission
