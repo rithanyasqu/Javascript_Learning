@@ -34,3 +34,14 @@ const c=()=>{
 console.log("arrow function")
 }
 c();
+
+
+//task
+let names ={
+    name:"riya",
+    age:20
+}
+greeting(names);
+function greeting(n){
+console.log(`hello ${n.name}`)
+}
