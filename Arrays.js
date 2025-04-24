@@ -49,6 +49,50 @@ console.log(cur)
 
 },0)
 
+//methods
+// Method	Use Case	Example
+// .push()	Add to end	arr.push(10)
+// .pop()	Remove from end	arr.pop()
+// .shift()	Remove from start	arr.shift()
+// .unshift()	Add to start	arr.unshift(1)
+// .map()	Transform elements	arr.map(x => x * 2)
+// .filter()	Filter elements	arr.filter(x => x > 5)
+// .reduce()	Accumulate values	arr.reduce((a, b) => a + b)
+// .forEach()	Loop through array	arr.forEach(x => console.log(x))
+// .find()	Find first match	arr.find(x => x > 10)
+// .includes()	Check if value exists	arr.includes(5)
+// .some()	Check if any item matches	arr.some(x => x > 10)
+// .every()	Check if all items match	arr.every(x => x > 0)
+// .flat()	Flatten nested arrays	[1, [2, 3]].flat()
+// .sort()	Sort elements	arr.sort((a, b) => a - b)
+// .splice()	Add/remove items at index	arr.splice(1, 2)
+// .slice()	Get portion of array	arr.slice(0, 2)
+// .join()	Join array to string	arr.join(', ')
+
+
+//removing with splice
+let s=[1,2,3]
+s.splice(0,4)
+console.log(s)
+
+//adding elements 
+ let s1=['a','b']
+ s1.splice(1,1,'c','d','e')
+console.log(s1);
+
+//displaying with slice 
+let s3=[1,2,3]
+let s2=s3.slice(1,2)
+console.log(s2)
+console.log(s2.includes(2))
+
+//find() 
+
+let answer=s3.find((n)=>{
+    return n==3
+})
+console.log(`${answer} this is inside the s3 array`)
+
 // task
 
 // sum of value
