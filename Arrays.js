@@ -149,3 +149,60 @@ let personObject = keyValuePairs.reduce((accumulator, currentValue) => {
 }, {}); // Initialize accumulator as an empty object
 
 console.log(personObject); 
+
+
+//map
+
+const arrm=[1,2,3]
+
+const newarr=arrm.map(add)
+
+function add(x){
+    return x+1;
+}
+console.log(newarr)
+
+//finding perimeter
+
+const arrp=[1,2,3,4]
+
+const pre=arrp.map(function c(v){
+   return Math.PI*v*v
+})
+console.log(pre)
+
+const summ=arrp.map((x)=>{
+    return x+1;
+})
+console.log(summ)
+
+
+//odd even
+// const oe=arrp.map((x)=>{
+//     if(x%2!=0){
+//         return x
+//     }
+// })
+const oe=arrp.map(x=>x%2!=0)
+console.log(oe)
+
+//object 
+
+const obb=[{name:"riya",age:12},{name:"riya",age:12}]
+
+const oo=obb.map((x)=>{
+ console.log(x.name)
+})
+
+
+//filter
+
+//odd even
+
+const off=arrp.filter(n=> n%2==0)
+// const off=arrp.filter((x)=>{
+//     if(x%2!=0){
+//         return x
+//     }
+// })
+console.log(off)
