@@ -223,4 +223,18 @@ const oFI=obb.filter((x)=>{
   console.log(users.find(x => x.age > 15))   //return first correct value 
   console.log(user);  // happy
 
+// array destructure
 
+let ad =[1,2,3]
+
+let [aa1,b,c]=ad
+
+let bb=[aa1,b,c]
+
+console.log(bb)
+
+//spread
+
+let cs=[...ad]
+
+console.log(cs)
