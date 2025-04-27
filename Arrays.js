@@ -188,7 +188,7 @@ console.log(oe)
 
 //object 
 
-const obb=[{name:"riya",age:12},{name:"riya",age:12}]
+const obb=[{name:"riya",age:12},{age:12}]
 
 const oo=obb.map((x)=>{
  console.log(x.name)
@@ -206,3 +206,21 @@ const off=arrp.filter(n=> n%2==0)
 //     }
 // })
 console.log(off)
+
+const oFI=obb.filter((x)=>{
+    return x.name //---checks whether every obj have name keyword
+})
+   console.log(oFI)
+
+   const users = [
+    { name: "riya", age: 12 },
+    { name: "john", age: 18 },
+    { name: "emma", age: 17 }
+  ];
+  
+  const user = users.filter(x => x.age > 15);
+  console.log(users.some(x => x.age > 15))  // return true or false 
+  console.log(users.find(x => x.age > 15))   //return first correct value 
+  console.log(user);  // happy
+
+
