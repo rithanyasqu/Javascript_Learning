@@ -21,21 +21,91 @@ let num={
 for(let key in num){
     console.log(key) //ouput will be order
 }
-// Write the code, one line for each action:
-
-// Create an empty object user.
-// Add the property name with the value John.
-// Add the property surname with the value Smith.
-// Change the value of the name to Pete.
-// Remove the property name from the object.
 
 let emptyobj={}
-
 // emptyobj.name="riya"// another way to add values
-
-
 console.log(emptyobj)
 
+//task
 for(let key in emptyobj){
 console.log("hey")
 }
+
+let salaries = {
+    John: 100,
+    Ann: 160,
+    Pete: 130
+  }
+let sum=0
+  for( let key in salaries){
+    sum+=salaries[key]
+  }
+  console.log(sum)
+
+//task 
+  let menu = {
+    width: 200,
+    height: 300,
+    title: "My menu"
+  };
+  multiplyNumeric(menu);
+
+  function multiplyNumeric(m){
+     for( let key in m){
+        if(typeof m[key]=="number"){
+            m[key]=m[key]*2
+        }
+     }
+  }
+  console.log(menu)
+ 
+// Reference 
+  let a="je"
+  let b=a
+  b="he"
+  console.log(a)// here it doesn't not sharing same reference 
+
+  let or={name:"rithu"}
+  let ar=or
+  ar.name="nithu"
+  console.log(or)// here both the object sharing same reference 
+
+   //TO Avoid this we need to clone it
+   let clone={}
+
+   for(let key in or){
+     clone[key]=or[key]
+   }
+clone.name="rithu"
+console.log(or)//here the value doesn't change
+
+//spread operator
+let clone1={...or,age:20}
+console.log(clone1)//have separate reference
+
+
+   const user = {
+    name: "John"
+  };
+  user.name = "Pete"; // (*)
+  console.log(user.name)//it will not cause error because user is only const the objcet literals inside it is free to use 
+
+ let nested={
+    name:"riya",
+    age:20,
+    hobby:{
+      Tech:"coding",
+      non:"drawing"
+    }
+ }
+ let nested1={...nested}
+ console.log(nested1)
+
+ //garbage collector
+ let users = {
+    name: "John"
+  };
+  
+  let admin = users;
+  users = null;
+  console.log(admin.name)
