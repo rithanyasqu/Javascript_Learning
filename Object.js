@@ -105,7 +105,35 @@ console.log(clone1)//have separate reference
  let users = {
     name: "John"
   };
-  
-  let admin = users;
-  users = null;
-  console.log(admin.name)
+
+let admin = users;
+users = null;
+console.log(admin.name)
+
+//nested object 
+
+let nestobj={
+  name:"riya",
+  age:21,
+  hobby:{
+    tech:"coding",
+    non_tech:"dancing"
+  }
+}
+console.log(nestobj.hobby.tech)
+
+// obj destructuring
+
+let obj3={name:"etho",
+  age:"ennovo"
+}
+let {name , age}=obj3;
+
+console.log(name)
+
+//Inside function
+
+function objdef({name,age}){
+console.log(name)
+}
+objdef(obj3)
