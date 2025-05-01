@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Custom Cursor</title>
+  <style>
+    body {
+      margin: 0;
+      cursor: none;
+      font-family: sans-serif;
+    }
+
+    .invert-cursor {
+      position: fixed;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      pointer-events: none;
+      mix-blend-mode: difference;
+      background: white;
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: black;
+      font-size: 8px;
+      font-weight: bold;
+      transition: all 0.2s ease;
+    }
+
+    .invert-cursor.square {
+      border-radius: 0%;
+      width: 50px;
+      height: 50px;
+      font-size: 10px;
+    }
+
+    .green-box {
+      width: 100px;
+      height: 100px;
+      background-color: green;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="invert-cursor" id="cursor"></div>
+
+  <div class="content">
+    <h1 style="color: white; background: black;">White on Black</h1>
+    <h1 style="color: black; background: white;">Black on White</h1>
+    <p>Some regular content...</p>
+  </div>
+
+  <p class="white-text">This is white text</p>
+  <p class="black-text">This is black text</p>
+
+  <div style="width: 100px;height: 100px; background-color: aqua;"></div>
+  <div style="width: 100px;height: 100px; background-color: red;"></div>
+  <div class="green-box"></div>
+
+  <script>
+    const cursor = document.getElementById('cursor');
+    const greenBox = document.querySelector('.green-box');
+
+    document.addEventListener('mousemove', (e) => {
+      cursor.style.left = `${e.clientX - cursor.offsetWidth / 2}px`;
+      cursor.style.top = `${e.clientY - cursor.offsetHeight / 2}px`;
+    });
+
+    greenBox.addEventListener('mouseenter', () => {
+      cursor.textContent = 'view';
+      cursor.classList.add('square');
+    });
+
+    greenBox.addEventListener('mouseleave', () => {
+      cursor.textContent = '';
+      cursor.classList.remove('square');
+    });
+  </script>
+</body>
+</html>
