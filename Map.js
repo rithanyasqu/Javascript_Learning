@@ -28,7 +28,7 @@ let arr4=arrf.map((v)=>{
  c=`$ ${v}`
  return c
 })
-
+//
 console.log(arr4)
 
 
