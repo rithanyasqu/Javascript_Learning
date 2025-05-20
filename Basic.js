@@ -191,3 +191,9 @@ function myfunction(v,i){
     console.log(v+i);
 }
 
+
+//Type conversion
+
+var a="123"
+var b1=Number(a)
+ console.log(typeof(b1))
