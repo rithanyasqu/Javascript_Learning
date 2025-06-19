@@ -34,3 +34,4 @@ var se="What I'd like to tell on this topic is:";
 
 var coin="$120"
 
+    
